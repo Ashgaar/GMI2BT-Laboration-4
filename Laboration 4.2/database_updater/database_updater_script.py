@@ -1,7 +1,7 @@
 import sqlite3, requests, json
 from sqlite3 import Error
 
-url_for_weather_data = "https://api.openweathermap.org/data/2.5/weather?q=Borlänge&appid=30dd1f6f5388207521043b867e018856"
+url_for_weather_data = "------------------------your token or something like that -----------------------"
 
 
 
