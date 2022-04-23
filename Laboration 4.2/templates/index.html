@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vädret</title>
+    <meta name="description" content="En webbsida designad av Mikael Olsson.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>Väder data</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Plats</th>
+            <th>Temperatur</th>
+            <th>Lufttryck</th>
+            <th>Luftfuktighet</th>
+            <th>Datum och tid</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

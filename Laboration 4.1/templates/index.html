@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Python formulär</title>
+    <meta name="description" content="En webbsida designad av Mikael Olsson.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <h1>Python formulär</h1>
+    </header>
+
+    <form method="post" action="{{url_for('register')}}">
+        <fieldset>
+            <div>
+                <label for="payment">Betalsätt * </label>
+                <select id="payment" name="payment" required>
+                    <option value="">Välj Betalsätt</option>
+                    <option value="Kort">Kort</option>
+                    <option value="Faktura">Faktura</option>
+                    <option value="Swish">Swish</option>
+                </select>
+
+            </div>
+            <div>
+                <label>Förnamn * <br><input type="text" placeholder="T.ex. Jonas" name="fname" required></label>
+            </div>
+            <div>
+                <label>Efternamn * <br><input type="text" placeholder="T.ex. Jonsson" name="lname" required></label>
+            </div>
+            <div>
+                <label>Adress * <br><input type="text" placeholder="T.ex. Ketchupvägen 23" name="address" required></label>
+            </div>
+            <div>
+                <label>Postnummer * <br><input type="text" placeholder="123 45" name="zipCode" required></label>
+            </div>
+            <div>
+                <label>Ort * <br><input type="text" placeholder="Gagnef" name="place" required></label>
+            </div>
+            <div>
+                <label>Mobil * <br><input type="text" placeholder="123-456 78 90" name="phone" required></label>
+            </div>
+            <div>
+                <label>Email * <br><input type="email" placeholder="T.ex. jj1986@hotmail.com" name="email" required></label>
+            </div>
+            <div>
+                <label>Lösenord * <br><input type="password" placeholder="••••••••••••••" name="password" required></label>
+            </div>
+            <div>
+                <p>* = Obligatoriska fält</p>
+            </div>
+            <div>
+                <label>Erbjudanden via e-post: <input type="checkbox" value="true" name="emailOffer"></label>
+            </div>
+            <div>
+                <label>E-post format:</label>
+                <label><input type="radio" value="HTML" name="emailFormat">HTML</label>
+                <label><input type="radio" value="text">Text</label>
+            </div>
+            <div>
+                <label for="extraInformation">Dina kommentarer:<br></label>
+                <textarea id="extraInformation" cols="30" rows="8"
+                    placeholder="Skriva gärna i om du har några extra kommentarer." name="comments"></textarea>
+            </div>
+            <div>
+                <input type="reset" value="Rensa">
+                <input type="submit" value="Skicka">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
